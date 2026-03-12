@@ -4,10 +4,10 @@ import { useForm } from 'react-hook-form';
 import PageTransition from '../components/PageTransition';
 
 const servicesOptions = [
-  "AC Repair", "AC Service & Deep Cleaning", "AC Gas Refilling", 
-  "AC Installation / Uninstallation", "AC Rent", "Cassette AC Service", 
-  "VRF & VRV Services", "Chiller Plant Maintenance", "Refrigerator Repair", 
-  "Washing Machine Repair", "Others"
+  "AC Repair", "AC Service & Deep Cleaning", "AC Gas Refilling",
+  "AC Installation / Uninstallation", "AC Rent", "Cassette AC Service",
+  "VRF & VRV Services", "Chiller Plant Maintenance", "Refrigerator Repair",
+  "Washing Machine Repair"
 ];
 
 const Booking = () => {
@@ -49,30 +49,30 @@ const Booking = () => {
                   </select>
                   {errors.service && <span className="error-msg">{errors.service.message}</span>}
                 </div>
-                
+
                 <div className="input-group">
                   <label className="input-label">Full Name</label>
                   <input type="text" className="form-control" {...register('name', { required: 'Name is required' })} placeholder="e.g. Rahul Sharma" />
                   {errors.name && <span className="error-msg">{errors.name.message}</span>}
                 </div>
-                
+
                 <div className="input-group">
                   <label className="input-label">Mobile Number</label>
                   <input type="tel" className="form-control" {...register('phone', { required: 'Phone is required', pattern: { value: /^[0-9]{10}$/, message: '10 digit number only' } })} placeholder="Phone Number" />
                   {errors.phone && <span className="error-msg">{errors.phone.message}</span>}
                 </div>
-                
+
                 <div className="input-group full-width">
                   <label className="input-label">Complete Address Details</label>
                   <textarea className="form-control" rows="3" {...register('address', { required: 'Address is required to dispatch technician' })} placeholder="House No, Street, Area..."></textarea>
                   {errors.address && <span className="error-msg">{errors.address.message}</span>}
                 </div>
-                
+
                 <div className="input-group full-width">
                   <label className="input-label">Specific Issue Details (Optional)</label>
                   <input type="text" className="form-control" {...register('details')} placeholder="e.g. AC not cooling, making noise..." />
                 </div>
-                
+
                 <div className="form-actions full-width">
                   <button type="submit" className="btn btn-primary lg booking-submit">
                     Confirm Booking • ₹350 Visit
