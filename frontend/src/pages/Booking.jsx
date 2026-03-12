@@ -7,7 +7,7 @@ const servicesOptions = [
   "AC Repair", "AC Service & Deep Cleaning", "AC Gas Refilling",
   "AC Installation / Uninstallation", "AC Rent", "Cassette AC Service",
   "VRF & VRV Services", "Chiller Plant Maintenance", "Refrigerator Repair",
-  "Washing Machine Repair"
+  "Washing Machine Repair", "Others"
 ];
 
 const Booking = () => {
