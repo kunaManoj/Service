@@ -10,7 +10,7 @@ const servicesList = [
     desc: 'Expert diagnosis and repair of all AC faults.', 
     details: 'Our expert technicians provide comprehensive diagnostics and repairs for all types of AC units, ensuring optimal performance and longevity.',
     points: ['Gas leak detection & fixing', 'Compressor repair', 'PCB repair', 'Fan motor issues'],
-    currentImg: '/images/IMG_3212.JPG.jpeg', 
+    currentImg: '/images/IMG_3215.JPG.jpeg', 
     icon: <Settings /> 
   },
   { 
@@ -132,7 +132,7 @@ const Services = () => {
   const closeModal = () => setSelectedService(null);
 
   return (
-    <section id="services" className="services-section bg-gradient-brand overlay-bg">
+    <section id="services" className="services-section">
       <div className="container">
         <div className="text-center padding-bottom-large">
           <h4 className="section-subtitle text-primary">OUR SERVICES</h4>

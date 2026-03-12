@@ -36,7 +36,7 @@ const HowItWorks = () => {
         >
           <div className="step-line"></div>
           <div className="step-img-wrap">
-            <img src="/images/IMG_3213.JPG.jpeg" alt="Technician Visits" />
+            <img src="/images/IMG_3216.JPG.jpeg" alt="Technician Visits" />
             <div className="step-number">2</div>
           </div>
           <div className="step-content">

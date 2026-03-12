@@ -20,7 +20,7 @@ const Contact = () => {
 
   return (
     <PageTransition>
-    <section className="page-gradient-bg" style={{ paddingTop: '150px', minHeight: '100vh', paddingBottom: '80px' }}>
+    <section className="page-gradient-bg contact-page-section">
       <div className="container">
       <div className="text-center padding-bottom-large">
         <h4 className="section-subtitle text-secondary">GET IN TOUCH</h4>
@@ -33,13 +33,12 @@ const Contact = () => {
       <div className="grid-2 align-start">
         <motion.div 
           className="contact-info glass" 
-          style={{ padding: '3rem', borderRadius: '24px' }}
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
         >
           <h3 className="mb-4 text-primary">Contact Information</h3>
           
-          <div className="flex gap-4 mb-4" style={{ display: 'flex', gap: '15px', alignItems: 'center', marginBottom: '1.5rem' }}>
+          <div className="contact-item-row">
             <div className="icon-wrap bg-light-primary"><Phone className="text-primary"/></div>
             <div>
               <p className="font-bold text-dark mb-2" style={{ fontWeight: '600' }}>Call Us Directly</p>
@@ -47,7 +46,7 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="flex gap-4 mb-4" style={{ display: 'flex', gap: '15px', alignItems: 'center', marginBottom: '1.5rem' }}>
+          <div className="contact-item-row">
             <div className="icon-wrap bg-light-secondary"><Mail className="text-secondary"/></div>
             <div>
               <p className="font-bold text-dark mb-2" style={{ fontWeight: '600' }}>Email Address</p>
@@ -55,7 +54,7 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="flex gap-4 mb-4" style={{ display: 'flex', gap: '15px', alignItems: 'center', marginBottom: '1.5rem' }}>
+          <div className="contact-item-row">
             <div className="icon-wrap bg-light-primary"><MapPin className="text-primary"/></div>
             <div>
               <p className="font-bold text-dark mb-2" style={{ fontWeight: '600' }}>Our Office</p>
@@ -66,7 +65,6 @@ const Contact = () => {
 
         <motion.div 
           className="contact-form glass"
-          style={{ padding: '3rem', borderRadius: '24px' }}
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
         >

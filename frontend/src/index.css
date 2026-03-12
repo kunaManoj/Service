@@ -180,6 +180,24 @@ a {
   gap: 2rem;
 }
 
+.contact-page-section {
+  padding-top: 150px;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.contact-info, .contact-form {
+  padding: 3.5rem;
+  border-radius: 24px;
+}
+
+.contact-item-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
 .align-center {
   align-items: center;
 }
@@ -251,20 +269,18 @@ a {
   transition: var(--transition);
   padding: 0.6rem 2rem;
   border-radius: 60px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .navbar.scrolled {
-  top: 8px; /* Fixed - same as initial */
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(35px);
-  -webkit-backdrop-filter: blur(35px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 2rem;
-  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .nav-container {
@@ -753,7 +769,11 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.f-card .icon-wrap {
+  margin-bottom: 1.25rem;
 }
 
 .f-card h4 {
@@ -788,16 +808,19 @@ a {
   position: relative;
   height: 240px;
   width: 100%;
-  border-radius: 0; /* Box corners handled by parent overflow hidden */
+  border-radius: 20px 20px 0 0; /* Match card border radius */
   overflow: hidden;
+  background: #fff; /* Explicit white background */
 }
 
 .service-img {
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 115%;
   object-fit: cover;
-  object-position: center 25%; /* Prevents cutting heads off technicians */
+  object-position: center;
+  display: block;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-left: -5%;
 }
 
 .service-card:hover .service-img {
@@ -948,8 +971,11 @@ a {
     font-size: 2rem;
   }
   .banner-image {
-    height: 250px;
+    height: 300px;
     min-height: auto;
+  }
+  .banner-image img {
+    object-position: 80% center; /* Shift image content left for better framing */
   }
 }
 
@@ -1866,6 +1892,21 @@ select.form-control {
     padding: 0 1.2rem;
   }
 
+  /* Contact page responsive */
+  .contact-page-section {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .contact-info, .contact-form {
+    padding: 2.2rem;
+  }
+
+  .contact-item-row {
+    gap: 15px;
+    margin-bottom: 1.5rem;
+  }
+
   /* Top banner */
   .top-banner-bar {
     font-size: 0.75rem;
@@ -1878,11 +1919,18 @@ select.form-control {
     width: 95%;
     padding: 1.2rem; /* Increased height */
     border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.12),
+      0 2px 8px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
   }
 
   .navbar.scrolled {
-    top: 8px; /* Same fixed position */
-    padding: 0.45rem 1rem;
+    background: rgba(255, 255, 255, 0.15);
   }
 
   .nav-logo span {
@@ -1917,6 +1965,7 @@ select.form-control {
     height: auto;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    object-position: 80% center; /* Shift image content left for better framing */
   }
 
   .hero-title {
@@ -1965,6 +2014,10 @@ select.form-control {
   .why-img-side {
     height: auto;
     aspect-ratio: 4 / 3;
+  }
+
+  .why-img-side img {
+    object-position: 80% center; /* Shift image content left for better framing */
   }
 
   .why-text-side {
@@ -2062,15 +2115,19 @@ select.form-control {
     line-height: 1.3;
   }
 
-  .icon-wrap {
+  .f-card .icon-wrap {
     margin: 0 auto;
-    width: 36px !important;
-    height: 36px !important;
+  }
+
+  .icon-wrap {
+    width: 42px !important;
+    height: 42px !important;
+    flex-shrink: 0;
   }
 
   .icon-wrap svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
   }
 
   /* Services */
@@ -2079,13 +2136,23 @@ select.form-control {
   }
 
   .service-card {
-    padding: 0; /* Edge to edge */
+    padding: 0;
+    width: 100%;
   }
 
   .service-img-wrap {
-    height: auto;
-    aspect-ratio: 3 / 2;
+    height: 320px;
+    aspect-ratio: auto;
     border-radius: 0;
+    width: 100%;
+  }
+
+  .service-img {
+    width: 110% !important;
+    height: 100% !important;
+    margin-left: -3% !important;
+    object-fit: cover;
+    object-position: center;
   }
 
   .service-content {
@@ -2207,6 +2274,14 @@ select.form-control {
     width: 96%;
     padding: 1rem 0.8rem; /* Increased vertical padding */
     border-radius: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.12),
+      0 2px 8px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
   }
 
   .nav-logo img {
