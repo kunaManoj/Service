@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Home, Phone, MessageCircle } from 'lucide-react';
+import { Zap, Home, Phone, MessageCircle, Wind, Fan, Settings, Cpu } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -52,7 +52,48 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <img src="/images/IMG_3208.JPG.jpeg" alt="AC Technician" className="hero-img-main" />
+          <img src="/images/IMG_3208.JPG.jpeg" alt="AC Technician" className="hero-img-main hide-on-mobile" />
+          
+          <div className="mobile-hero-icons-showcase">
+             <motion.div 
+               className="floating-tool-icon icon-ac"
+               animate={{ y: [0, -15, 0], opacity: [0.8, 1, 0.8] }}
+               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+             >
+               <Wind size={32} />
+               <span>AC</span>
+             </motion.div>
+             
+             <motion.div 
+               className="floating-tool-icon icon-fridge"
+               animate={{ y: [0, -20, 0], opacity: [0.7, 1, 0.7] }}
+               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+             >
+               <Cpu size={32} />
+               <span>Fridge</span>
+             </motion.div>
+             
+             <motion.div 
+               className="floating-tool-icon icon-cooler"
+               animate={{ y: [0, -12, 0], opacity: [0.8, 1, 0.8] }}
+               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+             >
+               <Fan size={32} />
+               <span>Cooler</span>
+             </motion.div>
+             
+             <motion.div 
+               className="floating-tool-icon icon-tools"
+               animate={{ y: [0, -18, 0], opacity: [0.7, 1, 0.7] }}
+               transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+             >
+               <Settings size={32} />
+               <span>Repair</span>
+             </motion.div>
+             
+             {/* Glow effect background */}
+             <div className="mobile-hero-glow"></div>
+          </div>
         </motion.div>
       </div>
     </section>
