@@ -41,8 +41,10 @@ const Navbar = () => {
             <Link to="/book" className="btn btn-primary" style={{ padding: '0.6rem 1.4rem', fontSize: '0.95rem' }}>Book Now</Link>
           </div>
 
-          <div className="mobile-menu-btn" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X /> : <Menu />}
+          <div className={`hamburger ${mobileMenuOpen ? 'active' : ''}`} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </div>
       </nav>

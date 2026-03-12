@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return (
-    <div className="container" style={{ margin: '4rem auto' }}>
+    <div id="pricing" className="container" style={{ margin: '4rem auto' }}>
       <motion.div 
         className="discount-banner-premium"
         initial={{ opacity: 0, scale: 0.95 }}
@@ -25,7 +25,7 @@ const Banner = () => {
           </div>
           <div className="banner-image">
              <img src="/images/IMG_3211.JPG.jpeg" alt="AC Service Offer" />
-             <div className="banner-badge">Same day 2 hrs</div>
+             {/* Removed badge as requested */}
           </div>
         </div>
       </motion.div>

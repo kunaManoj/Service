@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Clock, Home, Phone, MessageCircle } from 'lucide-react';
+import { Zap, Home, Phone, MessageCircle } from 'lucide-react';
 
 const Hero = () => {
   return (

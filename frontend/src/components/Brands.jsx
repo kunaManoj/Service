@@ -21,7 +21,7 @@ const brands = [
 
 const Brands = () => {
   return (
-    <section className="brands-marquee padding-y" style={{ background: '#f8f9fa' }}>
+    <section id="brands" className="brands-marquee padding-y" style={{ background: '#f8f9fa' }}>
       <div className="container" style={{ maxWidth: '100%', padding: '0 2%' }}>
         <div className="text-center mb-4">
           <h4 className="section-subtitle text-secondary">TOP BRANDS WE SERVE</h4>

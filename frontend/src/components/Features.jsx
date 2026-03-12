@@ -4,7 +4,7 @@ import { CheckCircle, Shield, PenToolIcon } from 'lucide-react';
 
 const Features = () => {
   return (
-    <section className="features-section">
+    <section id="about" className="features-section">
       <div className="unified-trust-banner">
         <div className="stats-container">
           <div className="stat-item">
