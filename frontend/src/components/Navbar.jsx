@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="container nav-container" style={{ padding: '0', maxWidth: '100%' }}>
           <Link to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <img src="/images/IMG_3215.JPG.jpeg" alt="Logo" style={{ width: '35px', height: '35px', objectFit: 'cover', borderRadius: '50%' }} />
-            <span style={{ fontSize: '1.4rem', fontWeight: '800', color: 'var(--dark-text)' }}>CoolBreeze AC</span>
+            <span style={{ fontSize: '1.4rem', fontWeight: '800', color: 'var(--dark-text)' }}>Perfect AC</span>
           </Link>
 
           <div className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>

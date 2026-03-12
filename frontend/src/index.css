@@ -942,6 +942,10 @@ a {
   object-fit: cover;
 }
 
+.mobile-banner-icons {
+  display: none;
+}
+
 .banner-badge {
   position: absolute;
   top: 20px;
@@ -970,13 +974,30 @@ a {
   .banner-heading {
     font-size: 2rem;
   }
-  .banner-image {
+  .desktop-banner-img {
+    display: none;
+  }
+  .mobile-banner-icons {
+    display: flex;
+    position: relative;
     height: 300px;
-    min-height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, rgba(168, 85, 247, 0.2), transparent 75%);
+    overflow: hidden;
   }
-  .banner-image img {
-    object-position: 80% center; /* Shift image content left for better framing */
+  .floating-icon {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.95);
+    filter: 
+      drop-shadow(0 0 10px rgba(168, 85, 247, 0.8))
+      drop-shadow(0 0 20px rgba(168, 85, 247, 0.4));
   }
+  .icon-1 { top: 20%; left: 15%; }
+  .icon-2 { bottom: 25%; left: 20%; }
+  .icon-3 { top: 25%; right: 15%; }
+  .icon-4 { bottom: 20%; right: 20%; }
 }
 
 /* Unified FAQ Accordion Box */
@@ -1025,21 +1046,11 @@ a {
   color: var(--primary-color);
 }
 
-.faq-answer {
-  overflow: hidden;
+.faq-answer-inner {
   color: #475569;
   font-size: 1rem;
   line-height: 1.7;
-  padding: 0 2rem; /* Initial padding */
-  max-height: 0;
-  opacity: 0;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.faq-item.active .faq-answer {
-  max-height: 1000px;
-  padding-bottom: 2rem;
-  opacity: 1;
+  padding: 0 2rem 2rem;
 }
 
 /* Swiper / Reviews */

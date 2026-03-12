@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-brand">
             <Link to="/" className="pb-3 block">
-              <span className="logo-text">CoolBreeze <span className="text-primary">AC</span></span>
+              <span className="logo-text">Perfect <span className="text-primary">AC</span></span>
             </Link>
             <p className="footer-desc mt-3">
               Premium air conditioning services in Hyderabad. We specialize in repair, installation, and deep cleaning for all major brands.
@@ -61,7 +61,7 @@ const Footer = () => {
                   <span className="contact-icon"><Mail size={18} /></span>
                   <div className="contact-text">
                     <span>Email Us</span>
-                    <strong>info@coolbreeze.com</strong>
+                    <strong>info@perfectac.com</strong>
                   </div>
                 </div>
               </li>
@@ -93,7 +93,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <div className="footer-bottom-content">
-            <p>© {new Date().getFullYear()} CoolBreeze AC Services. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Perfect AC Services. All rights reserved.</p>
             <div className="legal-links">
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Service</a>

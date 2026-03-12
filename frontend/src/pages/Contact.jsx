@@ -50,7 +50,7 @@ const Contact = () => {
             <div className="icon-wrap bg-light-secondary"><Mail className="text-secondary"/></div>
             <div>
               <p className="font-bold text-dark mb-2" style={{ fontWeight: '600' }}>Email Address</p>
-              <p className="text-muted">support@coolbreezeac.in</p>
+              <p className="text-muted">support@perfectac.in</p>
             </div>
           </div>
           

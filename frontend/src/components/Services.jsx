@@ -178,14 +178,24 @@ const Services = () => {
 
       <AnimatePresence>
         {selectedService && (
-          <div className="modal-overlay" onClick={closeModal}>
+          <motion.div 
+            className="modal-overlay" 
+            onClick={closeModal}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
             <motion.div 
               className="modal-content glass"
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              exit={{ opacity: 0, scale: 0.95, y: 15 }}
               onClick={(e) => e.stopPropagation()}
-              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              transition={{ 
+                duration: 0.4,
+                ease: [0.16, 1, 0.3, 1] // Custom ease for premium feel
+              }}
             >
               <button className="modal-close" onClick={closeModal}>
                 <X size={24} />
@@ -225,7 +235,7 @@ const Services = () => {
                 </div>
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </section>
