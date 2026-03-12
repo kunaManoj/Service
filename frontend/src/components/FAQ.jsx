@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const faqs = [
   { q: "What areas do you cover in Hyderabad?", a: "We cover almost all major areas in Hyderabad including Banjara Hills, Jubilee Hills, Madhapur, Gachibowli, Kukatpally, Mehdipatnam, Secunderabad, and surrounding areas. Our technicians are stationed across the city for fast dispatch." },
@@ -29,13 +29,28 @@ const FAQ = () => {
           >
             <div className="faq-question">
               <span>{faq.q}</span>
-              <div style={{ transition: 'transform 0.4s ease', transform: index === openIndex ? 'rotate(180deg)' : 'rotate(0)' }}>
-                <ChevronDown size={20} className={index === openIndex ? "text-primary" : "text-muted"} />
-              </div>
+              <motion.div 
+                animate={{ rotate: index === openIndex ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ChevronDown size={20} className={index === openIndex ? "text-primary" : "text-muted"}/>
+              </motion.div>
             </div>
-            <div className="faq-answer">
-              {faq.a}
-            </div>
+            <AnimatePresence initial={false}>
+              {index === openIndex && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  style={{ overflow: 'hidden' }}
+                >
+                  <div className="faq-answer-inner">
+                    {faq.a}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>
